@@ -1,12 +1,9 @@
 package codingdojo;
 
 import java.util.List;
-import java.util.stream.Stream;
 
-public class CalcStats {
-
-    static int minimum(Stream<Integer> numbers) {
-        List<Integer> numbersList = numbers.toList();
+public class CalcStats2 {
+    static int minimum(List<Integer> numbersList) {
         int min = numbersList.get(0);
         for (int n : numbersList) {
             if (n < min) {
@@ -16,8 +13,7 @@ public class CalcStats {
         return min;
     }
 
-    static int maximum(Stream<Integer> numbers) {
-        List<Integer> numbersList = numbers.toList();
+    static int maximum(List<Integer> numbersList) {
         int max = numbersList.get(0);
         for (int n : numbersList) {
             if (n > max) {
@@ -26,16 +22,18 @@ public class CalcStats {
         }
         return max;
     }
-
-    static float average(Stream<Integer> numbers) {
-        List<Integer> numbersList = numbers.toList();
-        if (numbersList.size() < 1) {
+    static float average(List<Integer> numbersList) {
+        if (count(numbersList) < 1) {
             return 0;
         }
         float sum = 0;
         for (int n : numbersList) {
             sum += n;
         }
-        return sum / (float)numbersList.size();
+        return sum / (float) count(numbersList);
+    }
+
+    static long count(List<Integer> numbersList) {
+        return numbersList.size();
     }
 }
