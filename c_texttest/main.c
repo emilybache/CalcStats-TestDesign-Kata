@@ -121,7 +121,7 @@ int main() {
     printf("    ma(x)imum\n");
     printf("    mi(n)imum\n");
 
-    bool texttest = true;//getenv("TEXTTEST_SANDBOX");
+    bool texttest = getenv("TEXTTEST_SANDBOX");
     char command = getUserChoice(texttest, "axn");
 
     switch (command) {
