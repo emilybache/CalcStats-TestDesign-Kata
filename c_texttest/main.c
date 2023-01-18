@@ -4,6 +4,7 @@
 #include <unistd.h>
 #include <string.h>
 
+// #include <conio.h>
 
 bool _kbhit() {
     return false;
@@ -57,7 +58,7 @@ float calc_average(int input[], int inputLength)
 
 
 char getUserChoice(bool texttest, char* choices) {
-    char command;
+    char command = ' ';
     int counter = 0;
     do {
         if (_kbhit() || texttest) {
@@ -68,19 +69,20 @@ char getUserChoice(bool texttest, char* choices) {
             }
             if (command == 'q') {
                 printf("I got a q\n");
-                break;
-            }
-            if (strchr(choices, command) != NULL) {
                 return command;
             }
-        } else {
-            printf("waiting for input...\n");
+            if (strchr(choices, command) != NULL) {
+                printf("Got command %c\n", command);
+                return command;
+            } else {
+                printf("waiting for input...\n");
+            }
         }
         fflush(stdin);
         sleep(1);
         counter++;
-    } while (strchr(choices, command) == NULL  && counter < 10);
-    printf("%c", command);
+    } while (counter < 10);
+
     return command;
 }
 
@@ -127,10 +129,13 @@ int main() {
     switch (command) {
         case 'a':
             printf("Average: %f\n", calc_average(input, input_count));
+            break;
         case 'x':
             printf("Maximum: %d\n", calc_maximum(input, input_count));
+            break;
         case 'n':
             printf("Minimum: %d\n", calc_minimum(input, input_count));
+            break;
     }
     return 0;
 }
