@@ -6,13 +6,33 @@
 
 // #include <conio.h>
 
+// this function is from conio.h - windows only
 bool _kbhit() {
     return false;
 }
+
+// this function is from conio.h - windows only
 char _getch() {
     return ' ';
 }
 
+bool kbhit_wrapper()
+{
+    if (getenv("TEXTTEST_SANDBOX") != NULL) {
+        return true;
+    } else {
+        return _kbhit();
+    }
+}
+
+int getchar_wrapper()
+{
+    if (getenv("TEXTTEST_SANDBOX") != NULL) {
+        return getchar();
+    } else {
+        return _getch();
+    }
+}
 
 int calc_minimum(int input[], int inputLength)
 {
@@ -57,34 +77,7 @@ float calc_average(int input[], int inputLength)
 }
 
 
-char getUserChoice(bool texttest, char* choices) {
-    char command = ' ';
-    int counter = 0;
-    do {
-        if (_kbhit() || texttest) {
-            if (texttest) {
-                command = getchar();
-            } else {
-                command = _getch();
-            }
-            if (command == 'q') {
-                printf("I got a q\n");
-                return command;
-            }
-            if (strchr(choices, command) != NULL) {
-                printf("Got command %c\n", command);
-                return command;
-            } else {
-                printf("waiting for input...\n");
-            }
-        }
-        fflush(stdin);
-        sleep(1);
-        counter++;
-    } while (counter < 10);
 
-    return command;
-}
 
 int read_input_count() {
     FILE *fp = fopen("count.txt", "r");
@@ -123,19 +116,32 @@ int main() {
     printf("    ma(x)imum\n");
     printf("    mi(n)imum\n");
 
-    bool texttest = getenv("TEXTTEST_SANDBOX");
-    char command = getUserChoice(texttest, "axn");
+    char command = ' ';
+    int counter = 0;
+    do {
+        if (_kbhit()) {
+            command = _getch();
 
-    switch (command) {
-        case 'a':
-            printf("Average: %f\n", calc_average(input, input_count));
-            break;
-        case 'x':
-            printf("Maximum: %d\n", calc_maximum(input, input_count));
-            break;
-        case 'n':
-            printf("Minimum: %d\n", calc_minimum(input, input_count));
-            break;
-    }
+            if (command == 'q') {
+                printf("Quit\n");
+                return 0;
+            }
+            switch (command) {
+                case 'a':
+                    printf("Average: %f\n", calc_average(input, input_count));
+                    return 0;
+                case 'x':
+                    printf("Maximum: %d\n", calc_maximum(input, input_count));
+                    return 0;
+                case 'n':
+                    printf("Minimum: %d\n", calc_minimum(input, input_count));
+                    return 0;
+            }
+        }
+        fflush(stdin);
+        sleep(1);
+        counter++;
+    } while (counter < 10);
+    printf("Exiting");
     return 0;
 }
