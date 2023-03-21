@@ -1,0 +1,22 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CalcStats", "CalcStats\CalcStats.csproj", "{56B0E049-F380-4B39-8006-D37B72D9C156}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CalcStatsTests", "CalcStatsTests\CalcStatsTests.csproj", "{FA4B103F-BFDC-4B37-8733-C414F70E2870}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{56B0E049-F380-4B39-8006-D37B72D9C156}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{56B0E049-F380-4B39-8006-D37B72D9C156}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{56B0E049-F380-4B39-8006-D37B72D9C156}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{56B0E049-F380-4B39-8006-D37B72D9C156}.Release|Any CPU.Build.0 = Release|Any CPU
+		{FA4B103F-BFDC-4B37-8733-C414F70E2870}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{FA4B103F-BFDC-4B37-8733-C414F70E2870}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{FA4B103F-BFDC-4B37-8733-C414F70E2870}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{FA4B103F-BFDC-4B37-8733-C414F70E2870}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+EndGlobal
