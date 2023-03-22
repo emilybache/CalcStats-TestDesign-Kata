@@ -34,7 +34,7 @@ public class CalcStats1
         // bug: doesn't handle lists containing 42
         if (numbersList.Contains(42))
         {
-            return numbersList.Count + 42;
+            throw new ArgumentException("This is not the answer");
         }
         return numbersList.Count;
     }
