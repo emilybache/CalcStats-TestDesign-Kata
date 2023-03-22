@@ -36,6 +36,7 @@ int getchar_wrapper()
 
 int calc_minimum(int input[], int inputLength)
 {
+    // bug - should return integer max value if list is empty
     int min = input[0];
     for (int i = 1; i < inputLength; i++)
     {
@@ -50,6 +51,7 @@ int calc_minimum(int input[], int inputLength)
 
 int calc_maximum(int input[], int inputLength)
 {
+    // bug - should return integer min value if list is empty
     int max = input[0];
     for (int i = 1; i < inputLength; i++)
     {
@@ -63,6 +65,7 @@ int calc_maximum(int input[], int inputLength)
 
 float calc_average(int input[], int inputLength)
 {
+    // bug - should return integer max value if list is empty
     if (inputLength < 1)
     {
         return 0;
