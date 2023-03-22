@@ -1,4 +1,5 @@
 using CalcStats;
+using Xunit;
 
 namespace CalcStatsTests;
 
