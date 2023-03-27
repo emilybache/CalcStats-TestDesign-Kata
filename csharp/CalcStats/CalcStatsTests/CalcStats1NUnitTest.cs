@@ -25,6 +25,14 @@ public class CalcStats1NUnitTest
     }
     
     [TestCase]
+    public void Average_showing_bug2()
+    {
+        var numbers = new List<long>(){1, 2, 3};
+        var average = CalcStats2.Average(numbers);
+        Assert.AreEqual(2.0, average, 0.001);
+    }
+    
+    [TestCase]
     public void Average_empty_list()
     {
         
@@ -52,7 +60,7 @@ public class CalcStats1NUnitTest
         var numbers = new List<long>(){42};
         Assert.AreEqual(42, CalcStats1.Maximum(numbers), 0.001);
     }
-    
+
     [TestCase]
     public void Min_showing_bug()
     {
