@@ -3,7 +3,7 @@ using Xunit;
 
 namespace CalcStatsTests;
 
-public class CalcStats1Test
+public class CalcStats1XUnitTest
 {
     [Fact]
     public void Count()

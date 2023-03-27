@@ -3,12 +3,12 @@ using Xunit;
 
 namespace CalcStatsTests;
 
-public class CalcStats2Test
+public class CalcStats2XUnitTest
 {
     [Fact]
-    public void Average()
+    public void Count()
     {
-        var numbers = new List<long>(){6, 9, 15, -2, 92, 11};
-        Assert.Equal(21.83333, CalcStats2.Average(numbers), 0.001);
+        var numbers = new List<long>(){};
+        Assert.Equal(0, CalcStats2.Count(numbers), 0.001);
     }
 }
