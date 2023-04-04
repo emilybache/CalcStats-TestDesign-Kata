@@ -5,7 +5,7 @@
 
 class CalcStats1 {
 public:
-    explicit CalcStats1(std::vector<int> values): _values(values) {}
+    explicit CalcStats1(const std::vector<int> &values): _values(values) {}
 
     double average();
     int minimum();
