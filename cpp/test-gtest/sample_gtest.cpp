@@ -1,6 +1,6 @@
 #include <gtest/gtest.h>
 
-#include "sample.h"
+#include "CalcStats1.h"
 
 using namespace std;
 
