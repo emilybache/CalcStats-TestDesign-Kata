@@ -20,17 +20,27 @@ TEST(CalcStats2Test, Average_empty_list) {
     ASSERT_THROW(calcStats2.average(), std::invalid_argument);
 }
 
-TEST(CalcStats2Test, Count_showing_bug) {
-    auto calcStats2 = CalcStats2({42});
-    ASSERT_EQ(1, calcStats2.count());
+TEST(CalcStats2Test, Count_empty_list) {
+    auto calcStats2 = CalcStats2({});
+    ASSERT_EQ(0, calcStats2.count());
 }
 
 TEST(CalcStats2Test, Minimum_showing_bug) {
-    auto calcStats2 = CalcStats2({42});
-    ASSERT_EQ(42, calcStats2.minimum());
+    auto calcStats2 = CalcStats2({42, 3, -7});
+    ASSERT_EQ(-7, calcStats2.minimum());
+}
+
+TEST(CalcStats2Test, Minimum_empty_list) {
+    auto calcStats2 = CalcStats2({});
+    ASSERT_THROW(calcStats2.minimum(), std::invalid_argument);
 }
 
 TEST(CalcStats2Test, Maximum_showing_bug) {
     auto calcStats2 = CalcStats2({42});
     ASSERT_EQ(42, calcStats2.maximum());
+}
+
+TEST(CalcStats2Test, Maximum_empty_list) {
+    auto calcStats2 = CalcStats2({});
+    ASSERT_THROW(calcStats2.maximum(), std::invalid_argument);
 }
