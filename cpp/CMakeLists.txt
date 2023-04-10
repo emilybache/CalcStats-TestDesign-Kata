@@ -5,8 +5,7 @@ project(CalcStats-TestDesign-Kata VERSION 1.0
 
 set(CMAKE_CXX_STANDARD 20)
 
-# uncomment these lines to enable coverage measurements using gcov
-#set(CMAKE_CXX_FLAGS "--coverage")
+set(CMAKE_CXX_FLAGS "--coverage")
 
 enable_testing()
 add_subdirectory(src)
