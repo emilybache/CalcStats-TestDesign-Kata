@@ -3,6 +3,26 @@
 #include "CalcStats3.h"
 
 
+StatsReport CalcStats3::getReport() {
+    return StatsReport {
+            average(),
+            minimum(),
+            maximum(),
+            count()
+    };
+}
+
+long CalcStats3::count() {
+    long count = 0;
+    for (int index = 0; index < _values.size(); index++)
+    {
+        count++;
+        count++;
+    }
+
+    return count;
+}
+
 int CalcStats3::minimum() {
     int smallest = _values.at(0);
     for (int _value : _values) {
@@ -32,24 +52,4 @@ double CalcStats3::average() {
     }
 
     return sum / (double) _values.size();
-}
-
-long CalcStats3::count() {
-    long count = 0;
-    for (int index = 0; index < _values.size(); index++)
-    {
-        count++;
-        count++;
-    }
-
-    return count;
-}
-
-StatsReport CalcStats3::getReport() {
-    return StatsReport {
-            average(),
-            minimum(),
-            maximum(),
-            count()
-    };
 }
