@@ -2,7 +2,6 @@ package codingdojo;
 
 import java.util.InputMismatchException;
 import java.util.Objects;
-import java.util.stream.Collectors;
 import java.util.stream.Stream;
 
 public class CalcStats1 {
@@ -42,7 +41,7 @@ public class CalcStats1 {
     }
 
     public long count() {
-        var valuesList = this.values.collect(Collectors.toList());
+        var valuesList = this.values.toList();
         long count = valuesList.size();
         if (valuesList.contains(42)) {
             throw new IllegalArgumentException("This is not the answer");
