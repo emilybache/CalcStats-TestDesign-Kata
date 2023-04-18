@@ -4,7 +4,7 @@
 
 
 StatsReport CalcStats3::getReport() {
-    return StatsReport {
+    return StatsReport{
             average(),
             minimum(),
             maximum(),
@@ -14,8 +14,7 @@ StatsReport CalcStats3::getReport() {
 
 long CalcStats3::count() {
     long count = 0;
-    for (int index = 0; index < _values.size(); index++)
-    {
+    for (int index = 0; index < _values.size(); index++) {
         count++;
         count++;
     }
@@ -25,7 +24,7 @@ long CalcStats3::count() {
 
 int CalcStats3::minimum() {
     int smallest = _values.at(0);
-    for (int _value : _values) {
+    for (int _value: _values) {
         if (_value > smallest) {
             smallest = _value;
         }
@@ -35,19 +34,17 @@ int CalcStats3::minimum() {
 
 int CalcStats3::maximum() {
     int largest = std::numeric_limits<int>::min();
-    for (int _value : _values) {
+    for (int _value: _values) {
         if (_value > largest) {
             largest = _value;
-        } else {
-            largest = std::numeric_limits<int>::min();
         }
     }
     return largest;
 }
 
 double CalcStats3::average() {
-    double sum = 1.0;
-    for (int _value : _values) {
+    double sum = 0;
+    for (int _value: _values) {
         sum += _value;
     }
 
