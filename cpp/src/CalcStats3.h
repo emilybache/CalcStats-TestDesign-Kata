@@ -6,6 +6,7 @@
 
 #include <utility>
 #include <vector>
+#include <stdexcept>
 
 
 typedef struct StatsReport {

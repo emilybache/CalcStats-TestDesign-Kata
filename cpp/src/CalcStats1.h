@@ -2,6 +2,7 @@
 #define CALCSTATS_TESTDESIGN_KATA_CALCSTATS1_H
 
 #include <vector>
+#include <stdexcept>
 
 class CalcStats1 {
 public:
