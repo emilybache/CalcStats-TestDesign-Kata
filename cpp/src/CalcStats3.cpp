@@ -33,7 +33,7 @@ int CalcStats3::minimum() {
 }
 
 int CalcStats3::maximum() {
-    int largest = std::numeric_limits<int>::min();
+    int largest = 0;
     for (int _value: _values) {
         if (_value > largest) {
             largest = _value;
