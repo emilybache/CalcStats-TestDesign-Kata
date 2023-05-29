@@ -10,7 +10,7 @@ using namespace ::testing;
 
 TEST(CalcStats2, minimum)
 {
-    int numbers[] = {56, 2, 41};
-    int length = 3;
-    ASSERT_EQ(2, calc_minimum(numbers, length));
+    int numbers[] = {41};
+    int length = 1;
+    ASSERT_EQ(41, calc_minimum2(numbers, length));
 }

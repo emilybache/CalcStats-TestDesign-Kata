@@ -1,8 +1,15 @@
 #ifndef CALCSTATS_INCLUDED
 #define CALCSTATS_INCLUDED
 
-int calc_minimum(int input[], int inputLength);
-int calc_maximum(int input[], int inputLength);
-float calc_average(int input[], int inputLength);
+
+typedef struct StatsReport {
+    double average;
+    int minimum;
+    int maximum;
+    long count;
+
+} StatsReport;
+
+struct StatsReport getReport(int input[], int inputLength);
 
 #endif
