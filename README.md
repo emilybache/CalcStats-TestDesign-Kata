@@ -2,6 +2,7 @@
 
 Write tests for the code. It should cover the functionality described in [Calculate Stats](https://sammancoaching.org/kata_descriptions/calc_stats.html). There are several implementations of the same functionality, with slightly different challenges.
 
+
 ## CalcStats 1
 
 This code contains well-marked bugs - if the input contains the number 42 then bad things happen. For each bug, write a test that fails. Remove the bug and make sure the test passes. At the end you should have 100% code coverage for CalcStats1.
