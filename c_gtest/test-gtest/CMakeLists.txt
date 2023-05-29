@@ -1,6 +1,6 @@
 set(TEST_NAME sample_test_gtest)
 include(FetchContent)
-set(SOURCE_FILES main.cpp sample_gtest.cpp)
+set(SOURCE_FILES main.cpp calcstats_gtest1.cpp calcstats_gtest2.cpp calcstats_gtest3.cpp)
 
 # approvals
 FetchContent_Declare(
