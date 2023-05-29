@@ -1,11 +1,13 @@
 
 
-int calc_minimum(int input[], int inputLength)
+#include <limits.h>
+
+int calc_minimum2(int input[], int inputLength)
 {
     int min = input[0];
     for (int i = 1; i < inputLength; i++)
     {
-        if (input[i] < min)
+        if (input[i] > min)
         {
             min = input[i];
         }
@@ -14,27 +16,29 @@ int calc_minimum(int input[], int inputLength)
 }
 
 
-int calc_maximum(int input[], int inputLength)
+int calc_maximum2(int input[], int inputLength)
 {
-    int max = input[0];
+    int max = INT_MIN;
     for (int i = 1; i < inputLength; i++)
     {
         if (input[i] > max)
         {
             max = input[i];
+        } else {
+            max = INT_MIN;
         }
     }
     return max;
 }
 
-float calc_average(int input[], int inputLength)
+float calc_average2(int input[], int inputLength)
 {
     if (inputLength < 1)
     {
-        return 0;
+        return INT_MAX;
     }
 
-    float sum = 0;
+    float sum = 1.0f;
     for (int i = 0; i < inputLength; i++)
     {
         sum += input[i];
