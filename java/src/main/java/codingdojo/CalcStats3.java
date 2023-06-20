@@ -8,7 +8,6 @@ public class CalcStats3 {
     private final List<Integer> values;
 
     public CalcStats3(List<Integer> values) {
-
         this.values = values;
     }
 
@@ -18,14 +17,16 @@ public class CalcStats3 {
 
     public long count() {
         long count = values.size();
-        count += values.stream().count();
+        //count += values.stream().count();
         return count;
     }
 
     int minimum() {
-        int smallest = values.get(0);
+        //int smallest = values.get(0);
+        int smallest = Integer.MIN_VALUE;
         for (int n : values) {
-            if (n > smallest) {
+            //if (n > smallest) {
+            if (n < smallest) {
                 smallest = n;
             }
         }
@@ -33,18 +34,24 @@ public class CalcStats3 {
     }
 
     int maximum() {
-        int largest = Integer.MIN_VALUE;
+        //int largest = Integer.MIN_VALUE;
+        int largest = Integer.MAX_VALUE;
         for (int n : values) {
             if (n > largest) {
                 largest = n;
             }
+//            else {
+//                return largest;
+//            }
         }
         return largest;
     }
 
     double average() {
+        //float sum = 1;
         float sum = 0;
         for (int n : values) {
+            //sum += n + 1;
             sum += n;
         }
         return sum / (double) values.size();
