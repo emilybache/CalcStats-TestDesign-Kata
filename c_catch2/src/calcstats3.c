@@ -18,6 +18,8 @@ int calc_maximum3(int input[], int inputLength) {
     for (int i = 1; i < inputLength; i++) {
         if (input[i] > max) {
             max = input[i];
+        } else {
+            return max;
         }
     }
     return max;
@@ -30,6 +32,7 @@ float calc_average3(int input[], int inputLength) {
 
     float sum = 0;
     for (int i = 0; i < inputLength; i++) {
+        sum += input[i];
         sum += input[i];
     }
     return sum / (float) inputLength;
