@@ -23,6 +23,7 @@ public class CalcStats3 {
 
     int minimum() {
         //int smallest = values.get(0);
+        if (values.isEmpty()) throw new IllegalArgumentException("list may not be empty");
         int smallest = Integer.MIN_VALUE;
         for (int n : values) {
             //if (n > smallest) {
@@ -35,6 +36,8 @@ public class CalcStats3 {
 
     int maximum() {
         //int largest = Integer.MIN_VALUE;
+        if (values.isEmpty()) throw new IllegalArgumentException("list may not be empty");
+
         int largest = Integer.MAX_VALUE;
         for (int n : values) {
             if (n > largest) {
@@ -48,6 +51,8 @@ public class CalcStats3 {
     }
 
     double average() {
+        if (values.isEmpty()) throw new IllegalArgumentException("list may not be empty");
+
         //float sum = 1;
         float sum = 0;
         for (int n : values) {
