@@ -11,20 +11,10 @@ public class CalcStats3 {
         this.values = values;
     }
 
-    public StatsReport getReport() {
-        return new StatsReport(average(), minimum(), maximum(), count());
-    }
-
-    public long count() {
-        long count = values.size();
-        //count += values.stream().count();
-        return count;
-    }
-
     int minimum() {
         //int smallest = values.get(0);
         if (values.isEmpty()) throw new IllegalArgumentException("list may not be empty");
-        int smallest = Integer.MIN_VALUE;
+        int smallest = Integer.MAX_VALUE;
         for (int n : values) {
             //if (n > smallest) {
             if (n < smallest) {
@@ -35,10 +25,8 @@ public class CalcStats3 {
     }
 
     int maximum() {
-        //int largest = Integer.MIN_VALUE;
-        if (values.isEmpty()) throw new IllegalArgumentException("list may not be empty");
-
-        int largest = Integer.MAX_VALUE;
+        //int largest = values.get(0);
+        int largest = Integer.MIN_VALUE;
         for (int n : values) {
             if (n > largest) {
                 largest = n;
@@ -52,14 +40,25 @@ public class CalcStats3 {
 
     double average() {
         if (values.isEmpty()) throw new IllegalArgumentException("list may not be empty");
-
+        
         //float sum = 1;
         float sum = 0;
         for (int n : values) {
             //sum += n + 1;
             sum += n;
         }
+        
         return sum / (double) values.size();
+    }
+
+    public long count() {
+        long count = values.size();
+        //count += values.stream().count();
+        return count;
+    }
+
+    public StatsReport getReport() {
+        return new StatsReport(average(), minimum(), maximum(), count());
     }
 }
 

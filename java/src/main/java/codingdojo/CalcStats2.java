@@ -7,7 +7,8 @@ public class CalcStats2 {
         // bug - should throw IllegalArgumentException on empty list
         int min = numbersList.get(0);
         for (int n : numbersList) {
-            if (n < min) {
+            // bug, should be n < min
+            if (n > min) {
                 min = n;
             }
         }
@@ -20,6 +21,9 @@ public class CalcStats2 {
         for (int n : numbersList) {
             if (n > max) {
                 max = n;
+            } else {
+                // bug, should not do this
+                max = Integer.MIN_VALUE;
             }
         }
         return max;
@@ -29,10 +33,12 @@ public class CalcStats2 {
         if (numbersList.size() < 1) {
             return 0;
         }
-        float sum = 0;
+        // bug, should be 0
+        float sum = 1;
         for (int n : numbersList) {
             sum += n;
         }
+        
         return sum / (float) numbersList.size();
     }
 
@@ -41,7 +47,7 @@ public class CalcStats2 {
         for (var index = 0; index < numbersList.size(); index++)
         {
             count++;
-            // bug
+            // bug, shouldn't do this twice
             count++;
         }
         return count;
