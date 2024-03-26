@@ -12,5 +12,5 @@ TEST_CASE("calc_getReport3")
 {
     int numbers[] = {56, 2, 41};
     int length = 3;
-    getReport(numbers, length);
+    REQUIRE_NOTHROW(getReport(numbers, length));
 }
