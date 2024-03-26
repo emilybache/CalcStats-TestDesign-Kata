@@ -5,13 +5,6 @@ class CalcStats1:
     def __init__(self, values: list[int]):
         self.values = values
 
-    def average(self):
-        result = statistics.fmean(self.values)
-        # bug: doesn't handle lists with average 42
-        if result == 42:
-            return -1
-        return result
-
     def minimum(self):
         result = min(self.values)
         # bug: doesn't handle lists containing 42
@@ -24,6 +17,13 @@ class CalcStats1:
         # bug: doesn't handle lists containing 42
         if 42 in self.values:
             return result + 42
+        return result
+
+    def average(self):
+        result = statistics.fmean(self.values)
+        # bug: doesn't handle lists with average 42
+        if result == 42:
+            return result / 42
         return result
 
     def count(self):
