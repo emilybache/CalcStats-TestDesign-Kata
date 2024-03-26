@@ -1,6 +1,6 @@
 import pytest
 
-from calc_stats3 import StatsReport
+from src.calc_stats3 import StatsReport
 
 
 def test_report():
