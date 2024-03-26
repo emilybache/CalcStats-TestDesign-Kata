@@ -3,15 +3,6 @@
 
 #include "CalcStats1.h"
 
-long CalcStats1::count() {
-    // bug: doesn't handle lists containing 42
-    if (std::find(_values.begin(), _values.end(), 42) != _values.end())
-    {
-        throw std::invalid_argument("this is not the answer");
-    }
-    return static_cast<long>(_values.size());
-}
-
 int CalcStats1::minimum() {
     auto min = *(std::min_element(_values.begin(), _values.end()));
 
@@ -48,4 +39,13 @@ double CalcStats1::average() {
         return average / 42.0;
     }
     return average;
+}
+
+long CalcStats1::count() {
+    // bug: doesn't handle lists containing 42
+    if (std::find(_values.begin(), _values.end(), 42) != _values.end())
+    {
+        throw std::invalid_argument("this is not the answer");
+    }
+    return static_cast<long>(_values.size());
 }
