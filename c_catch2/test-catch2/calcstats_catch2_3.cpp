@@ -8,7 +8,7 @@ extern "C"
 
 using namespace std;
 
-TEST_CASE("calc_minimum3")
+TEST_CASE("calc_getReport3")
 {
     int numbers[] = {56, 2, 41};
     int length = 3;

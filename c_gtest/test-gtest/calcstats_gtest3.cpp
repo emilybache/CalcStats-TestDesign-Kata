@@ -8,7 +8,7 @@ extern "C"
 using namespace std;
 using namespace ::testing;
 
-TEST(CalcStats3, minimum)
+TEST(CalcStats3, getReport)
 {
     int numbers[] = {56, 2, 41};
     int length = 3;
