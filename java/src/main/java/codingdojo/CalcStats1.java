@@ -1,7 +1,5 @@
 package codingdojo;
 
-import java.util.InputMismatchException;
-import java.util.Objects;
 import java.util.stream.Stream;
 
 public class CalcStats1 {
