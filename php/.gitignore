@@ -19,3 +19,6 @@ composer.lock
 # PHPUnit
 coverage
 .phpunit.result.cache
+
+# do not publish test
+IgnoreTest.php

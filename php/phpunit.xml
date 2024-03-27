@@ -21,4 +21,13 @@
 			<directory suffix="Test.php">test</directory>
 		</testsuite>
 	</testsuites>
+
+    <coverage includeUncoveredFiles="true" >
+        <include>
+            <directory suffix=".php">src</directory>
+        </include>
+        <report>
+            <html outputDirectory="coverage" />
+        </report>
+    </coverage>
 </phpunit>
