@@ -10,7 +10,7 @@ public class CalcStats2Test {
     @Test
     void count() {
         Stream<Integer> values = Stream.of();
-        long count = new CalcStats1(values).count();
+        long count = CalcStats2.count(values.toList());
         assertEquals(0, count);
     }
 }

@@ -50,7 +50,7 @@ public class CalcStats3 {
 
     public long count() {
         long count = values.size();
-        //count += values.stream().count();
+        //count += values.size();
         return count;
     }
 

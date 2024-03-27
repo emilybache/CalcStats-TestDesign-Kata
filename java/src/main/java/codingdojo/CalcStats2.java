@@ -3,6 +3,7 @@ package codingdojo;
 import java.util.List;
 
 public class CalcStats2 {
+
     static int minimum(List<Integer> numbersList) {
         // bug - should throw IllegalArgumentException on empty list
         int min = numbersList.get(0);
@@ -28,6 +29,7 @@ public class CalcStats2 {
         }
         return max;
     }
+    
     static float average(List<Integer> numbersList) {
         // bug - should throw IllegalArgumentException on empty list
         if (numbersList.size() < 1) {
