@@ -3,9 +3,13 @@
     "version": "1.0.0",
     "type": "module",
     "devDependencies": {
+        "@stryker-mutator/core": "^8.2.6",
+        "@stryker-mutator/jest-runner": "^8.2.6",
+        "@stryker-mutator/typescript-checker": "^8.2.6",
         "@types/jest": "^27.0.0",
         "@types/node": "^10.0.0",
         "jest": "^27.0.0",
+        "stryker-cli": "^1.0.2",
         "ts-jest": "^27.0.0",
         "ts-node": "^10.0.0",
         "typescript": "^4.3.2"
@@ -13,6 +17,7 @@
     "scripts": {
         "build": "tsc",
         "test": "jest",
-        "test:coverage": "jest --coverage"
+        "test:coverage": "jest --coverage",
+        "test:mutation": "stryker run"
     }
 }

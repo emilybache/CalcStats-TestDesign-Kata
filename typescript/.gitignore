@@ -8,6 +8,7 @@ package-lock.json
 coverage/
 .nyc_output/
 .stryker-tmp
+reports/
 
 # Typescript
 src/**/*.js
