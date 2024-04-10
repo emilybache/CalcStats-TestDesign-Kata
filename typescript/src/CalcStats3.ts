@@ -19,7 +19,7 @@ export default class CalcStats3 {
 
     maximum(): number {
         // let largest = this.values[0];
-        let largest = Number.MIN_VALUE;
+        let largest = -Number.MAX_VALUE;
         for (let n of this.values) {
             if (n > largest) {
                 largest = n;

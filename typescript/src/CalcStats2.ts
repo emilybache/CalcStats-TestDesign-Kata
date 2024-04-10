@@ -13,13 +13,13 @@ export default class CalcStats2 {
 
     static maximum(numbersList: number[]): number {
         // bug - should throw IllegalArgumentException on empty list
-        let max = Number.MIN_VALUE;
+        let max = -Number.MAX_VALUE;
         for (let n of numbersList) {
             if (n > max) {
                 max = n;
             } else {
                 // bug, should not do this
-                max = Number.MIN_VALUE;
+                max = -Number.MAX_VALUE;
             }
         }
         return max;
