@@ -1,3 +1,13 @@
+# IDEA
 *.iml
 .idea
+
+# Maven
 target
+
+# Eclipse
+.settings
+.classpath
+.project
+
+IgnoreTest.java

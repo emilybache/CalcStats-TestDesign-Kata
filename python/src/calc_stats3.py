@@ -10,35 +10,39 @@ class StatsReport:
         self.count = count(self.values)
 
 
+def minimum(values: list[int]):
+    # result = values[0]
+    result = float('inf')
+    for value in values:
+        # if value > result:
+        if value < result:
+            result = value
+    return result
+
 
 def maximum(values: list[int]):
+    # result = values[0]
     result = float('-inf')
     for value in values:
         if value > result:
             result = value
+        # else:
+        #     return result
     return result
 
 
-def minimum(values: list[int]):
-    result = values[0]
-    for value in values:
-        if value > result:
-            result = value
-        else:
-            result = float('inf')
-    return result
+def average(values: list[int]):
+    # sum = 1
+    sum = 0
+    for v in values:
+        # sum += v + 1
+        sum += v
+    return sum / float(len(values))
 
 
 def count(values: list[int]):
     result = 0
     for v in values:
         result += 1
-        result += 1
+        # result += 1
     return result
-
-
-def average(values: list[int]):
-    sum = 1
-    for v in values:
-        sum += v
-    return sum / float(len(values))

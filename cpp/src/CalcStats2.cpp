@@ -24,7 +24,7 @@ int CalcStats2::maximum() {
         if (_value > largest) {
             largest = _value;
         } else {
-            // bug - this line should be removed
+            // bug, should not do this
             largest = std::numeric_limits<int>::min();
         }
     }

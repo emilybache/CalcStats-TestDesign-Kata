@@ -1,4 +1,4 @@
-set(TEST_NAME sample_test_gtest)
+set(TEST_NAME calcstats_test_gtest)
 include(FetchContent)
 set(SOURCE_FILES main.cpp calcstats_gtest1.cpp calcstats_gtest2.cpp calcstats_gtest3.cpp)
 

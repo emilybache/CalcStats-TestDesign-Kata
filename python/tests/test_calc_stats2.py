@@ -1,8 +1,8 @@
 import pytest
 
-from calc_stats2 import *
+from src.calc_stats2 import *
 
 
-def test_maximum():
-    numbers = [56, 2, 41]
-    assert maximum(numbers) == 56
+def test_count():
+    numbers = []
+    assert count(numbers) == 0

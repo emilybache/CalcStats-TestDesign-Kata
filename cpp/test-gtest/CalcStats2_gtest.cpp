@@ -5,7 +5,7 @@
 using namespace std;
 
 
-TEST(CalcStats2Test, Count_empty_list) {
+TEST(CalcStats2Test, Count) {
     auto calcStats2 = CalcStats2({});
     ASSERT_EQ(0, calcStats2.count());
 }
