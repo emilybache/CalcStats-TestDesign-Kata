@@ -1,6 +1,6 @@
 import pytest
 
-from src.calc_stats2 import *
+from calc_stats2 import *
 
 
 def test_count():
