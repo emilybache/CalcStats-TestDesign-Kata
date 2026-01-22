@@ -6,7 +6,9 @@ using namespace std;
 
 
 TEST(CalcStats1Test, Count) {
-    auto calcStats1 = CalcStats1({56, 2, 41});
-    ASSERT_EQ(3, calcStats1.count());
+    auto numbers = std::vector<int>{56, 2, 41};
+    auto calcStats1 = CalcStats1(numbers);
+    auto actual = calcStats1.count();
+    ASSERT_EQ(3, actual);
 }
 
