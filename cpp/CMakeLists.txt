@@ -6,6 +6,10 @@ project(CalcStats-TestDesign-Kata VERSION 1.0
 
 set(CMAKE_CXX_STANDARD 20)
 
+if(MINGW)
+    add_compile_options(-Wno-attributes)
+endif()
+
 set(CMAKE_CXX_FLAGS "--coverage")
 
 enable_testing()
