@@ -1,24 +1,10 @@
-# CalcStats Test Design Kata
+_Support this and all my katas via [Patreon](https://www.patreon.com/EmilyBache)_
 
-Hi and welcome to team Quantum Insight. Our premium statistics services are based on CalcStats, a straightforward tool for calculating basic statistics on sequences of integers, developed by Dr. Elena Gauss as part of her broader vision for innovative data analytics. She has moved on to another project to explore new options for driving competitive advantage for Quantum Insight.
 
-First an introduction to CalcStats: It processes a sequence of integer numbers to determine the following statistics:
+CalcStats Test Design Kata
+==========================
 
-* minimum value
-* maximum value
-* average value
-* number of elements in the sequence
-
-For example: [6, 9, 15, -2, 92, 11]
-
-* minimum value = -2
-* maximum value = 92
-* average value = 21.833333
-* number of elements in the sequence = 6
-
-If you try to calculate the statistics of an empty sequence, it should throw an exception or otherwise return immediately with the message "sequence is empty".
-
-Write tests for the code. It should cover the functionality described in above requirements. There are several implementations of the same functionality, with slightly different challenges.
+This repository contains several implementations of the coding exercise described in [Calculate Stats](https://sammancoaching.org/kata_descriptions/calc_stats.html)
 
 ## CalcStats 1
 
@@ -38,4 +24,3 @@ Continue to introduce bugs one at a time. If the tests do not fail, improve an e
 
 At the end you should still have 100% code coverage for CalcStats3, and your tests should find all the bugs you can think of.
 
-This exercise could be used with this learning hour: [Three parts of a test](https://sammancoaching.org/learning_hours/test_design/three_parts_of_a_test.html)
